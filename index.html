@@ -3,21 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Aegis Ltd — Consultancy, Compliance and AI</title>
+<title>Aegis Advisory | Financial, Regulatory and Growth Consultancy for SMEs and Banks</title>
+<meta name="description" content="Aegis Advisory helps SMEs and financial institutions finance, comply and grow. Highly qualified consultants with deep banking and regulatory experience.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 68'%3E%3Cpath d='M30 2 4 12v22c0 17 11 28 26 32 15-4 26-15 26-32V12z' fill='%232F6BFF'/%3E%3Cpath d='M30 2v62C15 60 4 51 4 34V12z' fill='%2316337A'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Public+Sans:wght@400;500;600&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#050B18; --navy:#0B1F44; --blue:#2F6BFF; --sky:#8DB2FF;
-  --bg:#F4F7FC; --surface:#FFFFFF; --text:#14213D; --muted:#51607D; --line:#D6DEEC;
+  --bg:#F4F7FC; --surface:#FFFFFF; --text:#14213D; --muted:#51607D; --line:#D6DEEC; --link:#2457D6;
   --on-dark:#EAF0FF; --on-dark-muted:#A9B8D9;
   box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){--bg:#070E1D;--surface:#0D1930;--text:#E6ECFA;--muted:#9FB0D2;--line:#1E2F52;color-scheme:dark}
+  :root:not([data-theme="light"]){--bg:#070E1D;--surface:#0D1930;--text:#E6ECFA;--muted:#9FB0D2;--line:#1E2F52;--link:#8DB2FF;color-scheme:dark}
 }
-:root[data-theme="dark"]{--bg:#070E1D;--surface:#0D1930;--text:#E6ECFA;--muted:#9FB0D2;--line:#1E2F52;color-scheme:dark}
+:root[data-theme="dark"]{--bg:#070E1D;--surface:#0D1930;--text:#E6ECFA;--muted:#9FB0D2;--line:#1E2F52;--link:#8DB2FF;color-scheme:dark}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font:400 1.0625rem/1.65 "Public Sans",system-ui,sans-serif}
@@ -35,7 +37,7 @@ nav ul{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0;flex-wrap:wrap
 nav ul a{text-decoration:none;color:var(--on-dark-muted);font-weight:500;font-size:.95rem}
 nav ul a:hover{color:#fff}
 .hero-body{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:center;padding:5rem 0 6rem}
-.hero h1{font-size:clamp(2.2rem,5vw,3.7rem);font-weight:700;max-width:14ch}
+.hero h1{font-size:clamp(2rem,4.2vw,3.1rem);font-weight:700;max-width:20ch}
 .hero p{color:var(--on-dark-muted);max-width:46ch;margin:1.5rem 0 2rem;font-size:1.15rem}
 .btn{display:inline-block;background:var(--blue);color:#fff;padding:.85rem 1.6rem;border-radius:6px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font:600 1rem "Public Sans",sans-serif}
 .btn:hover{background:#4A7FFF}
@@ -48,17 +50,43 @@ section{padding:5rem 0}
 .head{max-width:60ch;margin-bottom:3rem}
 .head h2{font-size:clamp(1.7rem,3.4vw,2.4rem)}
 .head p{color:var(--muted);margin:.9rem 0 0}
-
-.svc{border-top:1px solid var(--line)}
-.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:2rem;padding:1.8rem 0;padding-inline-start:1.2rem;border-bottom:1px solid var(--line);border-inline-start:3px solid transparent;transition:border-color .2s,background .2s}
-.row:hover{border-inline-start-color:var(--blue);background:var(--surface)}
-.row h3{font-size:1.3rem}
-.row p{margin:0;color:var(--muted)}
-
+.intro{padding:4rem 0 1rem}
+.lead{font:500 clamp(1.15rem,2.1vw,1.5rem)/1.55 Sora,system-ui,sans-serif;max-width:62ch;margin:0;letter-spacing:-.01em}
+.alt{background:var(--surface)}
 .band{background:var(--navy);color:var(--on-dark)}
 .band .head p{color:var(--on-dark-muted)}
+
+.svc{border-top:1px solid var(--line)}
+.grp{font:600 .85rem Sora,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:var(--link);padding:2rem 1.2rem 1rem;border-bottom:1px solid var(--line)}
+.svc .grp:first-child{padding-top:1.4rem}
+.more{font-style:italic;color:var(--link);margin-inline-start:.5rem;white-space:nowrap}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.6rem}
+.card h3{font-size:1.15rem;margin-bottom:.6rem}
+.card p{margin:0;color:var(--muted)}
+.card a{display:inline-block;margin-top:1rem;color:var(--link);font-weight:600}
+.band .card{background:#0F2A5C;border-color:#1E3A75}
+.band .card p{color:var(--on-dark-muted)}
+.two{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.5rem;list-style:none;padding:0;margin:0}
+.steps li{border-top:3px solid var(--blue);padding-top:1rem}
+.steps .n{font:700 .85rem Sora,sans-serif;color:var(--link)}
+.steps h3{font-size:1.2rem;margin:.3rem 0 .5rem}
+.steps p{margin:0;color:var(--muted)}
+
+.av{width:88px;height:88px;border-radius:50%;background:linear-gradient(140deg,var(--blue),#16337A);display:grid;place-items:center;font:700 1.5rem Sora,sans-serif;color:#fff}
+.founder{display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start}
+.q{margin:0}
+.q p{font:500 clamp(1.1rem,2vw,1.4rem)/1.55 Sora,system-ui,sans-serif;max-width:62ch;margin:0 0 1.2rem}
+.q p::before{content:"“"}.q p::after{content:"”"}
+.q b{display:block;font-weight:600}
+.q span{color:var(--muted);font-size:.95rem}
+.q a{display:inline-block;margin-top:.8rem;color:var(--link);font-weight:600}
+
 .team{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem}
-.person .av{width:76px;height:76px;border-radius:50%;background:linear-gradient(140deg,var(--blue),#16337A);display:grid;place-items:center;font:700 1.4rem Sora,sans-serif;margin-bottom:1rem}
+.person .av{width:76px;height:76px;font-size:1.4rem;margin-bottom:1rem}
 .person h3{font-size:1.15rem}
 .person span{color:var(--sky);font-size:.95rem}
 .person p{color:var(--on-dark-muted);margin:.6rem 0 0;font-size:.98rem}
@@ -72,16 +100,22 @@ input,textarea,select{font:inherit;color:var(--text);background:var(--surface);b
 textarea{min-height:130px;resize:vertical}
 .note{font-size:.9rem;color:var(--muted);min-height:1.3em;margin:0}
 
-footer{background:var(--ink);color:var(--on-dark-muted);padding:2rem 0;font-size:.92rem}
-footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+footer{background:var(--ink);color:var(--on-dark-muted);padding:3rem 0 2rem;font-size:.92rem}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;padding-bottom:2rem;margin-bottom:1.5rem;border-bottom:1px solid #1E2F52}
+footer h4{font:600 .8rem Sora,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:var(--on-dark);margin:0 0 .8rem}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+footer a{text-decoration:none;color:var(--on-dark-muted)}
+footer a:hover{color:#fff}
+.bottom{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
 select.lang{width:auto;background:#0B1F44;color:var(--on-dark);border:1px solid #2B427A;border-radius:6px;padding:.4rem .8rem;font:500 .92rem "Public Sans",Cairo,sans-serif;cursor:pointer}
 select.lang option{background:#0B1F44;color:#EAF0FF}
-[dir="rtl"] body,[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3,[dir="rtl"] .logo,[dir="rtl"] input,[dir="rtl"] textarea,[dir="rtl"] select,[dir="rtl"] .btn{font-family:Cairo,system-ui,sans-serif}
+[dir="rtl"] body,[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3,[dir="rtl"] .lead,[dir="rtl"] .q p,[dir="rtl"] .logo,[dir="rtl"] input,[dir="rtl"] textarea,[dir="rtl"] select,[dir="rtl"] .btn{font-family:Cairo,system-ui,sans-serif}
 [dir="rtl"] body{line-height:1.8}
 [dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{letter-spacing:0}
+[dir="rtl"] .grp,[dir="rtl"] footer h4{letter-spacing:0;font-family:Cairo,sans-serif}
 @media (max-width:760px){
-  .hero-body,.contact,.row{grid-template-columns:1fr}
+  .hero-body,.contact,.founder{grid-template-columns:1fr}
   .hero-body{padding:3rem 0 4rem}
   .shield{max-width:170px;justify-self:start}
   section{padding:3.5rem 0}
@@ -95,7 +129,7 @@ select.lang option{background:#0B1F44;color:#EAF0FF}
 .svc-item summary::-webkit-details-marker{display:none}
 .svc-item summary h3{font-size:1.3rem}.svc-item summary p{margin:0;color:var(--muted)}
 .sbody{padding:0 1.2rem 2.2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.8rem 2.5rem}
-.sbody h4{font:600 .8rem Sora,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin:0 0 .6rem}
+.sbody h4{font:600 .8rem Sora,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:var(--link);margin:0 0 .6rem}
 .sbody p,.sbody ul,.sbody ol{margin:0;color:var(--muted)}
 .sbody ul,.sbody ol{padding-inline-start:1.2rem}.sbody li{margin-bottom:.5rem}.sbody li b{color:var(--text)}
 .sbody .full{grid-column:1/-1}
@@ -110,7 +144,7 @@ select.lang option{background:#0B1F44;color:#EAF0FF}
     <nav aria-label="Main">
       <a class="logo" href="#top" id="top">
         <svg viewBox="0 0 60 68" aria-hidden="true"><path d="M30 2 4 12v22c0 17 11 28 26 32 15-4 26-15 26-32V12z" fill="#2F6BFF"/><path d="M30 2v62C15 60 4 51 4 34V12z" fill="#16337A"/></svg>
-        Aegis Ltd
+        Aegis Advisory
       </a>
       <ul>
         <li><a href="#services">Services</a></li>
@@ -121,10 +155,10 @@ select.lang option{background:#0B1F44;color:#EAF0FF}
     </nav>
     <div class="hero-body">
       <div>
-        <h1>Clear advice for confident decisions.</h1>
-        <p>Aegis Ltd helps companies manage their finances, grow their markets and put AI to work, with one trusted team behind every decision.</p>
-        <a class="btn" href="#contact">Talk to us</a>
-        <a class="btn ghost" href="#services">Our services</a>
+        <h1>Financial, regulatory and growth advisory for SMEs and financial institutions.</h1>
+        <p>Highly qualified consultants with deep banking and regulatory experience, helping you finance, comply and grow.</p>
+        <a class="btn" href="#contact">Book a consultation</a>
+        <a class="btn ghost" href="#services">Explore our services</a>
       </div>
       <svg class="shield" viewBox="0 0 60 68" role="img" aria-label="Aegis shield emblem"><path d="M30 2 4 12v22c0 17 11 28 26 32 15-4 26-15 26-32V12z" fill="#2F6BFF"/><path d="M30 2v62C15 60 4 51 4 34V12z" fill="#16337A"/><path d="M30 2 4 12v22c0 17 11 28 26 32" fill="none" stroke="#8DB2FF" stroke-width=".6" opacity=".6"/></svg>
     </div>
@@ -132,13 +166,67 @@ select.lang option{background:#0B1F44;color:#EAF0FF}
 </header>
 
 <main>
+<section class="intro">
+  <div class="wrap">
+    <p class="lead">Aegis Advisory is a consultancy that combines banking insight, hands-on SME experience and deep regulatory expertise. Our specialized consultants help business owners strengthen their finances and secure funding, and help banks and financial institutions build compliance frameworks that stand up to scrutiny. We give you clear, practical advice from people who have worked on both sides of the table.</p>
+  </div>
+</section>
+
 <section id="services">
   <div class="wrap">
     <div class="head">
-      <h2>What we do</h2>
-      <p>Six services, one team. Open any service to see how we work.</p>
+      <h2>How we can help</h2>
+      <p>Open any service to see how we work.</p>
     </div>
     <div class="svc" id="svc"></div>
+  </div>
+</section>
+
+<section id="why" class="band">
+  <div class="wrap">
+    <div class="head"><h2>Why clients choose Aegis</h2></div>
+    <div class="cards">
+      <div class="card"><h3>Highly qualified, specialized consultants</h3><p>Our team is built around deep expertise in finance, banking, compliance and SME advisory, not generalists.</p></div>
+      <div class="card"><h3>Senior oversight</h3><p>Our founder, who brings more than fifteen years of banking and SME experience, reviews our work and takes part in key client meetings.</p></div>
+      <div class="card"><h3>We know both sides of the table</h3><p>We understand what banks and regulators require, and what growing businesses can realistically deliver.</p></div>
+      <div class="card"><h3>Practical, not theoretical</h3><p>We give clear recommendations and help you put them into practice, with plans that work in daily operations.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="clients">
+  <div class="wrap">
+    <div class="head"><h2>Advice for the organizations that need it most</h2></div>
+    <div class="cards two">
+      <div class="card"><h3>Small and mid-sized businesses</h3><p>Whether you need clearer financial control, access to bank financing, or a path into new markets, we give you the guidance of a senior finance team without the overhead.</p><a href="#service-1">See our SME services</a></div>
+      <div class="card"><h3>Banks and financial institutions</h3><p>From AML and KYC reviews to regulatory gap analysis and remediation, we help you meet today’s requirements and prepare for tomorrow’s.</p><a href="#service-3">See our regulatory services</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="alt">
+  <div class="wrap">
+    <div class="head"><h2>A clear process, from first conversation to results</h2></div>
+    <ol class="steps">
+      <li><span class="n">01</span><h3>Understand</h3><p>We listen first, learning about your business, your goals and your constraints.</p></li>
+      <li><span class="n">02</span><h3>Assess</h3><p>We review your situation honestly and identify what matters most.</p></li>
+      <li><span class="n">03</span><h3>Plan</h3><p>We agree on a practical roadmap with clear priorities and timelines.</p></li>
+      <li><span class="n">04</span><h3>Support</h3><p>We stay involved through implementation and review progress with you.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="founder">
+  <div class="wrap">
+    <div class="head"><h2>A word from our founder</h2></div>
+    <div class="founder">
+      <div class="av" aria-hidden="true">AJ</div>
+      <blockquote class="q">
+        <p>I have spent my career in banking and working alongside growing businesses, and I have seen how much depends on the quality of advice. At Aegis, our consultants are chosen for their expertise, and I personally supervise our work so that every client receives advice we can stand behind.</p>
+        <b>Antonie Jleilaty</b><span>Founder, Aegis Advisory</span><br>
+        <a href="#team">Meet our team</a>
+      </blockquote>
+    </div>
   </div>
 </section>
 
@@ -149,9 +237,9 @@ select.lang option{background:#0B1F44;color:#EAF0FF}
       <p>The people who lead Aegis and the partners who help us deliver.</p>
     </div>
     <div class="team">
-      <div class="person"><div class="av">AJ</div><h3>Antonie Jleilaty</h3><span>Managing director</span><p>Exp:A short line about experience and focus.</p></div>
-      <div class="person"><div class="av">FN</div><h3>Full Name</h3><span>Partner, finance</span><p>Exp:A short line about experience and focus.</p></div>
-      <div class="person"><div class="av">FN</div><h3>Full Name</h3><span>Partner, marketing and AI</span><p>Exp:A short line about experience and focus.</p></div>
+      <div class="person"><div class="av">AJ</div><h3>Antonie Jleilaty</h3><span>Managing director</span><p>A short line about experience and focus.</p></div>
+      <div class="person"><div class="av">FN</div><h3>Full Name</h3><span>Partner, finance</span><p>A short line about experience and focus.</p></div>
+      <div class="person"><div class="av">FN</div><h3>Full Name</h3><span>Partner, marketing and AI</span><p>A short line about experience and focus.</p></div>
     </div>
   </div>
 </section>
@@ -159,81 +247,121 @@ select.lang option{background:#0B1F44;color:#EAF0FF}
 <section id="contact">
   <div class="wrap contact">
     <div class="info">
-      <div class="head" style="margin-bottom:1.5rem"><h2>Contact us</h2><p>Tell us about your business and we’ll reply within one working day.</p></div>
+      <div class="head" style="margin-bottom:1.5rem"><h2>Let’s talk about your business.</h2><p>Tell us what you are working on and we will tell you honestly how we can help. Your first conversation is confidential and carries no obligation.</p></div>
       <p><b>Email</b>info@aegis-ltd.com</p>
       <p><b>Phone</b>+961 3 747 613</p>
       <p><b>Address</b>Your office address, City, Country</p>
     </div>
     <form id="f" novalidate>
       <label>Name<input name="name" required autocomplete="name"></label>
+      <label>Company<input name="company" autocomplete="organization"></label>
       <label>Email<input name="email" type="email" required autocomplete="email"></label>
-      <label>Service
-        <select name="service"><option>Business Development &amp; Market Entry</option><option>Finance &amp; CFO Advisory for SMEs</option><option>SME Advisory &amp; Bank-Readiness</option><option>Regulatory Compliance &amp; AML Advisory</option><option>AI and Digital Transformation</option><option>Business Agent</option><option>Other</option></select>
-      </label>
-      <label>Message<textarea name="msg" required></textarea></label>
-      <button class="btn" type="submit">Send message</button>
+      <label>Phone (optional)<input name="phone" type="tel" autocomplete="tel"></label>
+      <label>How can we help?<textarea name="msg" required></textarea></label>
+      <button class="btn" type="submit">Book a consultation</button>
       <p class="note" id="note" role="status"></p>
     </form>
   </div>
 </section>
 </main>
 
-<footer><div class="wrap"><span>© 2026 Aegis Ltd. All rights reserved.</span><span>Finance · Market entry · Compliance · AI</span></div></footer>
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><h4>Services</h4><ul id="fsvc"></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#team">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>info@aegis-ltd.com</li><li>+961 3 747 613</li></ul></div>
+    </div>
+    <div class="bottom"><span>© 2026 Aegis Ltd. All rights reserved.</span><span>Finance · Market entry · Compliance · AI</span></div>
+  </div>
+</footer>
 
 <script>
 var D={
-"Six services, one team. Open any service to see how we work.":["ست خدمات وفريق واحد. افتح أي خدمة لتعرف كيف نعمل.","Six services, une seule équipe. Ouvrez un service pour voir notre façon de travailler."],
 "Business Development & Market Entry":["التطوير التجاري ودخول الأسواق","Développement commercial et entrée sur les marchés"],
 "Finance & CFO Advisory for SMEs":["الاستشارات المالية والمدير المالي للشركات الصغيرة والمتوسطة","Conseil financier et DAF externalisé pour PME"],
 "SME Advisory & Bank-Readiness":["استشارات الشركات الصغيرة والمتوسطة والجاهزية المصرفية","Conseil PME et préparation bancaire"],
 "Regulatory Compliance & AML Advisory":["الامتثال التنظيمي واستشارات مكافحة تبييض الأموال","Conformité réglementaire et conseil LCB-FT"],
-"AI and Digital Transformation":["الذكاء الاصطناعي والتحول الرقمي","IA et transformation numérique"],
+"AI & Digital Transformation":["الذكاء الاصطناعي والتحول الرقمي","IA et transformation numérique"],
 "Business Agent":["الوكيل التجاري","Agent commercial"],
-"Grow into new markets with the right partners, a clear plan and real local insight.":["توسّع في أسواق جديدة مع الشركاء المناسبين وخطة واضحة ومعرفة محلية حقيقية.","Développez-vous sur de nouveaux marchés avec les bons partenaires, un plan clair et une vraie connaissance locale."],
-"Senior financial leadership for growing companies, without the cost of a full-time CFO.":["قيادة مالية خبيرة للشركات النامية، دون كلفة مدير مالي بدوام كامل.","Un pilotage financier senior pour les entreprises en croissance, sans le coût d’un DAF à temps plein."],
-"Prepare your business to secure financing, on better terms and with fewer surprises.":["جهّز شركتك للحصول على التمويل بشروط أفضل ومفاجآت أقل.","Préparez votre entreprise à obtenir un financement, à de meilleures conditions et avec moins de surprises."],
-"Practical compliance and anti-money-laundering frameworks that satisfy regulators and work in daily operations.":["أطر امتثال ومكافحة تبييض أموال عملية ترضي الجهات الرقابية وتصلح للعمل اليومي.","Des cadres de conformité et de LCB-FT pratiques, qui satisfont les régulateurs et fonctionnent au quotidien."],
-"Use AI and digital tools where they create real value, and put them to work in a practical way.":["استخدم الذكاء الاصطناعي والأدوات الرقمية حيث تصنع قيمة حقيقية، وبطريقة عملية.","Utilisez l’IA et les outils numériques là où ils créent une vraie valeur, de façon pratique."],
+"Senior financial leadership, without the cost of a full-time CFO.":["قيادة مالية خبيرة، دون كلفة مدير مالي بدوام كامل.","Un pilotage financier senior, sans le coût d’un DAF à temps plein."],
+"Prepare your company to secure financing on better terms.":["جهّز شركتك للحصول على التمويل بشروط أفضل.","Préparez votre entreprise à obtenir un financement à de meilleures conditions."],
+"Practical compliance frameworks that satisfy regulators and work in daily operations.":["أطر امتثال عملية ترضي الجهات الرقابية وتصلح للعمل اليومي.","Des cadres de conformité pratiques, qui satisfont les régulateurs et fonctionnent au quotidien."],
+"Enter new markets with the right partners and a clear plan.":["ادخل أسواقًا جديدة مع الشركاء المناسبين وخطة واضحة.","Entrez sur de nouveaux marchés avec les bons partenaires et un plan clair."],
+"Put AI and digital tools to work where they create real value.":["وظّف الذكاء الاصطناعي والأدوات الرقمية حيث تصنع قيمة حقيقية.","Mettez l’IA et les outils numériques au travail là où ils créent une vraie valeur."],
 "A trusted local presence for companies entering or operating in the region.":["حضور محلي موثوق للشركات التي تدخل المنطقة أو تعمل فيها.","Une présence locale de confiance pour les entreprises qui entrent ou opèrent dans la région."],
+"Learn more":["اعرف المزيد","En savoir plus"],
+"Finance and compliance":["المالية والامتثال","Finance et conformité"],"Growth":["النمو","Croissance"],
 "The challenge":["التحدي","Le défi"],"How we help":["كيف نساعدك","Comment nous aidons"],"How we work":["كيف نعمل","Notre façon de travailler"],"What you receive":["ما ستحصل عليه","Ce que vous recevez"],"Who we work with":["مع من نعمل","Avec qui nous travaillons"],"Why work with us":["لماذا تعمل معنا","Pourquoi nous choisir"],
 "Finance · Market entry · Compliance · AI":["المالية · دخول الأسواق · الامتثال · الذكاء الاصطناعي","Finance · Entrée sur les marchés · Conformité · IA"],
-
 "Services":["الخدمات","Services"],
 "Management and partners":["الإدارة والشركاء","Direction et partenaires"],
 "Contact us":["تواصل معنا","Contactez-nous"],
-"Clear advice for confident decisions.":["نصيحة واضحة لقرارات واثقة.","Des conseils clairs pour décider en confiance."],
-"Aegis Ltd helps companies manage their finances, grow their markets and put AI to work, with one trusted team behind every decision.":["تساعد Aegis Ltd الشركات على إدارة أموالها وتوسيع أسواقها وتوظيف الذكاء الاصطناعي، مع فريق واحد موثوق وراء كل قرار.","Aegis Ltd aide les entreprises à gérer leurs finances, à développer leurs marchés et à tirer parti de l’IA, avec une seule équipe de confiance derrière chaque décision."],
-"Talk to us":["تحدث إلينا","Parlons-en"],
-"Our services":["خدماتنا","Nos services"],
-"What we do":["ماذا نقدّم","Ce que nous faisons"],
-"The people who lead Aegis and the partners who help us deliver.":["الأشخاص الذين يقودون Aegis والشركاء الذين يساعدوننا على التنفيذ.","Les personnes qui dirigent Aegis et les partenaires qui nous aident à livrer."],
-"Full name":["الاسم الكامل","Nom complet"],
+"Financial, regulatory and growth advisory for SMEs and financial institutions.":["استشارات مالية وتنظيمية وللنمو للشركات الصغيرة والمتوسطة والمؤسسات المالية.","Conseil financier, réglementaire et de croissance pour les PME et les institutions financières."],
+"Highly qualified consultants with deep banking and regulatory experience, helping you finance, comply and grow.":["مستشارون عالو التأهيل يتمتعون بخبرة مصرفية وتنظيمية عميقة، يساعدونك على التمويل والامتثال والنمو.","Des consultants hautement qualifiés, forts d’une solide expérience bancaire et réglementaire, pour vous aider à financer, vous conformer et croître."],
+"Book a consultation":["احجز استشارة","Réserver une consultation"],
+"Explore our services":["اكتشف خدماتنا","Découvrir nos services"],
+"Aegis Advisory is a consultancy that combines banking insight, hands-on SME experience and deep regulatory expertise. Our specialized consultants help business owners strengthen their finances and secure funding, and help banks and financial institutions build compliance frameworks that stand up to scrutiny. We give you clear, practical advice from people who have worked on both sides of the table.":["Aegis Advisory شركة استشارية تجمع بين الرؤية المصرفية والخبرة العملية مع الشركات الصغيرة والمتوسطة والخبرة التنظيمية العميقة. يساعد مستشارونا المتخصصون أصحاب الأعمال على تعزيز أوضاعهم المالية وتأمين التمويل، ويساعدون البنوك والمؤسسات المالية على بناء أطر امتثال تصمد أمام التدقيق. نقدّم لكم نصيحة واضحة وعملية من أشخاص عملوا على طرفي الطاولة.","Aegis Advisory est un cabinet de conseil qui allie vision bancaire, expérience concrète des PME et solide expertise réglementaire. Nos consultants spécialisés aident les dirigeants à renforcer leurs finances et à obtenir des financements, et aident les banques et institutions financières à bâtir des dispositifs de conformité qui résistent à l’examen. Nous vous offrons des conseils clairs et pratiques, de la part de personnes qui ont travaillé des deux côtés de la table."],
+"How we can help":["كيف يمكننا مساعدتك","Comment nous pouvons vous aider"],
+"Open any service to see how we work.":["افتح أي خدمة لتعرف كيف نعمل.","Ouvrez un service pour voir notre façon de travailler."],
+"Why clients choose Aegis":["لماذا يختار العملاء Aegis","Pourquoi les clients choisissent Aegis"],
+"Highly qualified, specialized consultants":["مستشارون متخصصون عالو التأهيل","Des consultants hautement qualifiés et spécialisés"],
+"Our team is built around deep expertise in finance, banking, compliance and SME advisory, not generalists.":["بُني فريقنا على خبرة عميقة في المالية والمصارف والامتثال واستشارات الشركات الصغيرة والمتوسطة، لا على المستشارين العامين.","Notre équipe repose sur une expertise approfondie en finance, banque, conformité et conseil aux PME, pas sur des généralistes."],
+"Senior oversight":["إشراف خبير","Une supervision senior"],
+"Our founder, who brings more than fifteen years of banking and SME experience, reviews our work and takes part in key client meetings.":["يراجع مؤسسنا، صاحب الخبرة التي تتجاوز خمس عشرة سنة في المصارف والشركات الصغيرة والمتوسطة، أعمالنا ويشارك في اجتماعات العملاء الأساسية.","Notre fondateur, qui compte plus de quinze ans d’expérience dans la banque et auprès des PME, revoit notre travail et participe aux réunions clés avec les clients."],
+"We know both sides of the table":["نعرف طرفي الطاولة","Nous connaissons les deux côtés de la table"],
+"We understand what banks and regulators require, and what growing businesses can realistically deliver.":["نفهم ما تتطلبه البنوك والجهات الرقابية، وما تستطيع الشركات النامية تقديمه فعلًا.","Nous comprenons ce qu’exigent les banques et les régulateurs, et ce que les entreprises en croissance peuvent réellement fournir."],
+"Practical, not theoretical":["عملي لا نظري","Pratique, pas théorique"],
+"We give clear recommendations and help you put them into practice, with plans that work in daily operations.":["نقدّم توصيات واضحة ونساعدك على تطبيقها، بخطط تصلح للعمل اليومي.","Nous formulons des recommandations claires et vous aidons à les mettre en œuvre, avec des plans qui fonctionnent au quotidien."],
+"Advice for the organizations that need it most":["نصيحة للجهات التي تحتاجها أكثر","Des conseils pour les organisations qui en ont le plus besoin"],
+"Small and mid-sized businesses":["الشركات الصغيرة والمتوسطة","Petites et moyennes entreprises"],
+"Whether you need clearer financial control, access to bank financing, or a path into new markets, we give you the guidance of a senior finance team without the overhead.":["سواء كنتم بحاجة إلى رقابة مالية أوضح، أو إلى تمويل مصرفي، أو إلى طريق نحو أسواق جديدة، نقدّم لكم إرشاد فريق مالي خبير دون الأعباء الإضافية.","Que vous ayez besoin d’un meilleur contrôle financier, d’un accès au financement bancaire ou d’une voie vers de nouveaux marchés, nous vous offrons l’accompagnement d’une équipe financière senior sans les frais généraux."],
+"See our SME services":["اطّلع على خدماتنا للشركات الصغيرة والمتوسطة","Voir nos services pour PME"],
+"Banks and financial institutions":["البنوك والمؤسسات المالية","Banques et institutions financières"],
+"From AML and KYC reviews to regulatory gap analysis and remediation, we help you meet today’s requirements and prepare for tomorrow’s.":["من مراجعات مكافحة تبييض الأموال ومعرفة العميل إلى تحليل الفجوات التنظيمية والمعالجة، نساعدكم على تلبية متطلبات اليوم والاستعداد لمتطلبات الغد.","Des revues LCB-FT et KYC à l’analyse des écarts réglementaires et à la remédiation, nous vous aidons à répondre aux exigences d’aujourd’hui et à anticiper celles de demain."],
+"See our regulatory services":["اطّلع على خدماتنا التنظيمية","Voir nos services réglementaires"],
+"A clear process, from first conversation to results":["عملية واضحة، من أول حديث إلى النتائج","Un processus clair, de la première discussion aux résultats"],
+"Understand":["نفهم","Comprendre"],
+"We listen first, learning about your business, your goals and your constraints.":["نصغي أولًا، ونتعرّف على عملك وأهدافك وقيودك.","Nous écoutons d’abord, pour connaître votre entreprise, vos objectifs et vos contraintes."],
+"Assess":["نقيّم","Évaluer"],
+"We review your situation honestly and identify what matters most.":["نراجع وضعك بصدق ونحدد ما هو الأهم.","Nous examinons votre situation en toute franchise et identifions l’essentiel."],
+"Plan":["نخطّط","Planifier"],
+"We agree on a practical roadmap with clear priorities and timelines.":["نتفق على خارطة طريق عملية بأولويات وجداول زمنية واضحة.","Nous convenons d’une feuille de route pratique, avec des priorités et des délais clairs."],
+"Support":["ندعم","Accompagner"],
+"We stay involved through implementation and review progress with you.":["نبقى معك خلال التنفيذ ونراجع التقدم معك.","Nous restons impliqués pendant la mise en œuvre et faisons le point avec vous."],
+"A word from our founder":["كلمة من مؤسسنا","Un mot de notre fondateur"],
+"I have spent my career in banking and working alongside growing businesses, and I have seen how much depends on the quality of advice. At Aegis, our consultants are chosen for their expertise, and I personally supervise our work so that every client receives advice we can stand behind.":["أمضيت مسيرتي المهنية في العمل المصرفي وإلى جانب الشركات النامية، ورأيت كم يعتمد على جودة النصيحة. في Aegis، يُختار مستشارونا لخبرتهم، وأشرف شخصيًا على عملنا ليحصل كل عميل على نصيحة نقف خلفها.","J’ai passé ma carrière dans la banque et aux côtés d’entreprises en croissance, et j’ai vu à quel point tout dépend de la qualité des conseils. Chez Aegis, nos consultants sont choisis pour leur expertise, et je supervise personnellement notre travail afin que chaque client reçoive des conseils que nous pouvons assumer."],
+"Founder, Aegis Advisory":["المؤسس، Aegis Advisory","Fondateur, Aegis Advisory"],
+"Meet our team":["تعرّف على فريقنا","Découvrez notre équipe"],
 "Managing director":["المدير العام","Directeur général"],
 "Partner, finance":["شريك، المالية","Associé, finance"],
 "Partner, marketing and AI":["شريك، التسويق والذكاء الاصطناعي","Associé, marketing et IA"],
+"The people who lead Aegis and the partners who help us deliver.":["الأشخاص الذين يقودون Aegis والشركاء الذين يساعدوننا على التنفيذ.","Les personnes qui dirigent Aegis et les partenaires qui nous aident à livrer."],
 "A short line about experience and focus.":["سطر قصير عن الخبرة والتخصص.","Une courte phrase sur l’expérience et le domaine d’expertise."],
-"Tell us about your business and we’ll reply within one working day.":["حدّثنا عن عملك وسنردّ خلال يوم عمل واحد.","Parlez-nous de votre entreprise, nous répondons sous un jour ouvré."],
+"Let’s talk about your business.":["لنتحدث عن عملك.","Parlons de votre entreprise."],
+"Tell us what you are working on and we will tell you honestly how we can help. Your first conversation is confidential and carries no obligation.":["أخبرنا بما تعمل عليه وسنخبرك بصراحة كيف يمكننا المساعدة. محادثتك الأولى سرّية ولا يترتب عليها أي التزام.","Dites-nous sur quoi vous travaillez et nous vous dirons honnêtement comment nous pouvons vous aider. Votre première conversation est confidentielle et sans engagement."],
 "Email":["البريد الإلكتروني","E-mail"],
 "Phone":["الهاتف","Téléphone"],
 "Address":["العنوان","Adresse"],
 "Your office address, City, Country":["عنوان مكتبك، المدينة، البلد","Adresse du bureau, ville, pays"],
 "Name":["الاسم","Nom"],
-"Service":["الخدمة","Service"],
-"Message":["الرسالة","Message"],
-"Other":["أخرى","Autre"],
-"Send message":["إرسال الرسالة","Envoyer le message"],
+"Company":["الشركة","Entreprise"],
+"Phone (optional)":["الهاتف (اختياري)","Téléphone (facultatif)"],
+"How can we help?":["كيف يمكننا مساعدتك؟","Comment pouvons-nous vous aider ?"],
+"About":["من نحن","À propos"],
+"Contact":["التواصل","Contact"],
 "© 2026 Aegis Ltd. All rights reserved.":["© 2026 Aegis Ltd. جميع الحقوق محفوظة.","© 2026 Aegis Ltd. Tous droits réservés."],
 "Please fill in your name, a valid email and a message.":["يرجى إدخال اسمك وبريد إلكتروني صحيح ورسالة.","Veuillez saisir votre nom, un e-mail valide et un message."],
 "Your email app is opening with your message ready to send.":["يتم الآن فتح تطبيق البريد ورسالتك جاهزة للإرسال.","Votre application e-mail s’ouvre avec votre message prêt à envoyer."]
 };
-var TT={en:"Aegis Ltd — Consultancy, Compliance and AI",ar:"Aegis Ltd — استشارات وامتثال وذكاء اصطناعي",fr:"Aegis Ltd — Conseil, conformité et IA"};
+var TT={en:"Aegis Advisory | Financial, Regulatory and Growth Consultancy for SMEs and Banks",ar:"Aegis Advisory | استشارات مالية وتنظيمية وللنمو للشركات الصغيرة والمتوسطة والبنوك",fr:"Aegis Advisory | Conseil financier, réglementaire et de croissance pour PME et banques"};
 var cur='en';
 function t(s){var i=cur==='ar'?0:1;return cur==='en'||!D[s]?s:D[s][i];}
 function setLang(l){
   cur=l;
   var h=document.documentElement;h.lang=l;h.dir=l==='ar'?'rtl':'ltr';
   document.title=TT[l];
-  var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){return n.parentNode.tagName==='SCRIPT'?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT;}}),n;
+  var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){var p=n.parentNode;return(p.tagName==='SCRIPT'||(p.tagName==='B'&&p.parentNode.tagName==='LI'))?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT;}}),n;
   while((n=w.nextNode())){
     if(n._o===undefined)n._o=n.nodeValue.trim();
     if(n._o&&D[n._o])n.nodeValue=t(n._o);
@@ -245,15 +373,7 @@ function setLang(l){
 document.getElementById('lang').addEventListener('change',function(){setLang(this.value);});
 
 var S=[
-{t:"Business Development & Market Entry",g:"Grow into new markets with the right partners, a clear plan and real local insight.",
-i:"Entering a new market, or opening a new segment in an existing one, is one of the most rewarding moves a company can make, and one of the easiest to get wrong. We help international companies establish a foothold in the region, and help local companies expand into new markets, with a practical plan that takes you from first assessment to your first signed deals.",
-c:"Most companies that struggle in a new market do not lack a good product. They lack local knowledge, the right introductions, and a realistic view of pricing, competition and regulation. Without these, months are lost on the wrong partners, the wrong channels and the wrong expectations.",
-h:["Market assessment: sizing the opportunity, mapping competitors and identifying the segments worth pursuing","Entry strategy: choosing the right route to market, whether direct sales, distributors, partnerships or a local presence","Partner and customer identification: finding, vetting and approaching distributors, partners and priority customers","Pricing and positioning: adapting your offer to what the market will actually accept","Sales pipeline design: building a repeatable process for generating and following up opportunities","Growth planning: setting realistic targets and milestones for the first twelve months"],
-s:["Understand: we learn about your business, your goals and your appetite for investment and risk.","Assess: we research the market and test your offer against real demand and real competition.","Plan: we agree on an entry strategy, target segments and a shortlist of partners and prospects.","Activate: we support introductions, meetings and negotiations, and review progress against the plan."],
-r:["A market assessment report","A clear entry roadmap with priorities and timelines","A shortlist of qualified partners or leads","A twelve-month growth and sales plan"],
-w:"International companies exploring the region, and local small and mid-sized companies looking to expand into new markets, segments or countries.",
-y:"Our consultants are highly qualified specialists in banking, finance and SME growth, and every engagement is supervised by our founder, who brings more than fifteen years in the sector. We understand how companies are financed, how deals are structured and how decisions are made, which helps us open the right doors and avoid costly detours."},
-{t:"Finance & CFO Advisory for SMEs",g:"Senior financial leadership for growing companies, without the cost of a full-time CFO.",
+{grp:"Finance and compliance",t:"Finance & CFO Advisory for SMEs",g:"Senior financial leadership, without the cost of a full-time CFO.",
 i:"Growing businesses need clear financial direction: how much cash is available, which investments make sense, and what the numbers say about tomorrow. Many small and mid-sized companies do not yet need a full-time finance director, but they cannot afford to run without one. Our CFO advisory gives you senior financial expertise on a project or ongoing basis, so you can plan with confidence and make better decisions.",
 c:"Owner-managed companies often rely on bookkeeping that records what has happened, but offers little guidance on what to do next. Cash surprises, unclear profitability, weak reporting and unprepared financing discussions are common symptoms.",
 h:["Financial planning and budgeting: building budgets and forecasts that management can actually use","Cash flow management: forecasting cash, improving collections and controlling costs","Profitability analysis: understanding which products, clients and activities create value","Management reporting: simple, reliable monthly reporting with the key indicators that matter","Financing and investment readiness: preparing models and documentation for banks and investors","Fractional or interim CFO support: a senior finance partner embedded in your management team, for as long as you need"],
@@ -261,7 +381,7 @@ s:["Diagnose: we review your financial position, reporting and processes.","Prio
 r:["A financial model, budget and forecast","A cash flow forecast and cash management plan","A monthly management reporting pack","Financing-ready documentation, when needed"],
 w:"Owner-managed and mid-sized companies, family businesses and growing start-ups that need strong financial guidance but do not have a dedicated finance director.",
 y:"Our highly qualified, specialized consultants bring finance expertise and hands-on experience from banking and SME environments, and our founder supervises every engagement. Together, we know how banks read your numbers, and we help you present and manage them accordingly."},
-{t:"SME Advisory & Bank-Readiness",g:"Prepare your business to secure financing, on better terms and with fewer surprises.",
+{t:"SME Advisory & Bank-Readiness",g:"Prepare your company to secure financing on better terms.",
 i:"Whether a bank says yes, and on what terms, depends on much more than the strength of your business. It depends on how well your finances, governance and documentation are presented. We help small and mid-sized companies see themselves as a bank does, close the gaps, and approach lenders with confidence.",
 c:"Many viable companies are turned down or offered poor terms because of incomplete records, unclear financial statements, weak business plans or governance gaps, problems that could have been fixed before applying.",
 h:["Bank-readiness assessment: reviewing your company against the criteria lenders typically apply","Financial statement review and presentation: making your accounts clear, consistent and credible","Business plans and credit applications: preparing a convincing case for the financing you need","Governance and record-keeping: strengthening the basics that lenders and investors look for","Compliance readiness: making sure your documentation meets the checks banks are required to perform","Negotiation support: helping you understand and compare terms, and prepare for discussions with banks"],
@@ -269,7 +389,7 @@ s:["Assess: we evaluate your company as a credit analyst would.","Identify gaps:
 r:["A bank-readiness assessment with a clear action plan","A credit-ready financial package","A business plan and supporting documentation","Guidance on approaching and negotiating with lenders"],
 w:"SMEs seeking loans, credit lines or trade finance, and businesses that have struggled with bank requirements or have been declined in the past.",
 y:"Our consultants have seen financing decisions from the bank’s side of the table, and our founder, with more than fifteen years in banking and SME lending, oversees every engagement. We know what credit teams look for and how to present a company so that its strengths are clear."},
-{t:"Regulatory Compliance & AML Advisory",g:"Practical compliance and anti-money-laundering frameworks that satisfy regulators and work in daily operations.",
+{t:"Regulatory Compliance & AML Advisory",g:"Practical compliance frameworks that satisfy regulators and work in daily operations.",
 i:"Regulatory expectations on banks and financial institutions keep rising, and so does the cost of getting compliance wrong. We help institutions assess, build and strengthen their compliance and AML frameworks, with solutions designed to withstand regulatory scrutiny and to be workable for the people who apply them every day.",
 c:"Rules change, supervisors expect more, and internal teams are stretched. Policies written to satisfy an inspection often do not match how work is really done, and gaps tend to surface only when a regulator or an audit finds them.",
 h:["AML and KYC program review: assessing your customer due diligence, monitoring and reporting processes","Regulatory gap analysis: comparing your current framework with applicable requirements","Remediation planning and support: turning findings into a prioritized, realistic action plan","Policies, procedures and controls: drafting or updating documentation that reflects real practice","Risk assessments: enterprise and customer risk assessments that inform your controls","Sanctions compliance: reviewing screening processes and escalation procedures","Training: practical sessions for staff and management"],
@@ -277,7 +397,15 @@ s:["Scope: we agree on the regulations, business lines and processes in focus.",
 r:["A gap analysis report with ranked findings","A remediation roadmap with owners and timelines","Updated policies, procedures and risk assessments","Training sessions for relevant staff"],
 w:"Banks, financial institutions and other regulated entities that want to strengthen their frameworks, prepare for inspections or respond to regulatory findings.",
 y:"Our highly qualified, specialized consultants have extensive hands-on experience in compliance and AML, gained in banking. Every engagement is supervised by our founder, who has more than fifteen years in the sector. We approach compliance as practitioners: rigorous about requirements, and realistic about how institutions operate."},
-{t:"AI and Digital Transformation",g:"Use AI and digital tools where they create real value, and put them to work in a practical way.",
+{grp:"Growth",t:"Business Development & Market Entry",g:"Enter new markets with the right partners and a clear plan.",
+i:"Entering a new market, or opening a new segment in an existing one, is one of the most rewarding moves a company can make, and one of the easiest to get wrong. We help international companies establish a foothold in the region, and help local companies expand into new markets, with a practical plan that takes you from first assessment to your first signed deals.",
+c:"Most companies that struggle in a new market do not lack a good product. They lack local knowledge, the right introductions, and a realistic view of pricing, competition and regulation. Without these, months are lost on the wrong partners, the wrong channels and the wrong expectations.",
+h:["Market assessment: sizing the opportunity, mapping competitors and identifying the segments worth pursuing","Entry strategy: choosing the right route to market, whether direct sales, distributors, partnerships or a local presence","Partner and customer identification: finding, vetting and approaching distributors, partners and priority customers","Pricing and positioning: adapting your offer to what the market will actually accept","Sales pipeline design: building a repeatable process for generating and following up opportunities","Growth planning: setting realistic targets and milestones for the first twelve months"],
+s:["Understand: we learn about your business, your goals and your appetite for investment and risk.","Assess: we research the market and test your offer against real demand and real competition.","Plan: we agree on an entry strategy, target segments and a shortlist of partners and prospects.","Activate: we support introductions, meetings and negotiations, and review progress against the plan."],
+r:["A market assessment report","A clear entry roadmap with priorities and timelines","A shortlist of qualified partners or leads","A twelve-month growth and sales plan"],
+w:"International companies exploring the region, and local small and mid-sized companies looking to expand into new markets, segments or countries.",
+y:"Our consultants are highly qualified specialists in banking, finance and SME growth, and every engagement is supervised by our founder, who brings more than fifteen years in the sector. We understand how companies are financed, how deals are structured and how decisions are made, which helps us open the right doors and avoid costly detours."},
+{t:"AI & Digital Transformation",g:"Put AI and digital tools to work where they create real value.",
 i:"Technology only pays off when it is chosen for a clear purpose and adopted by the people who use it. We help companies find where AI and digital tools can improve efficiency, reduce costs and strengthen decision-making, then guide the practical steps to implement them, with particular focus on finance, banking and SME operations.",
 c:"Many organizations know they should modernize but are unsure where to start, which tools are worth the investment, and how to bring their teams along. The result is scattered pilots that never become part of how the business actually works.",
 h:["Digital maturity assessment: understanding where you stand today and where technology can help most","Opportunity mapping: identifying and prioritizing use cases by value, cost and ease of implementation","Process digitization and automation: replacing manual, repetitive work in areas such as reporting, onboarding and document handling","AI use cases: applying AI to practical tasks such as analysis, customer due diligence support and reporting","Tool selection: helping you choose and compare solutions without vendor bias","Adoption and change management: training and supporting your people so new tools are actually used"],
@@ -299,7 +427,8 @@ y:"We combine local relationships with professional discipline. Our highly quali
   function ul(a,tag){return '<'+(tag||'ul')+'>'+a.map(li).join('')+'</'+(tag||'ul')+'>';}
   var o='';
   S.forEach(function(s,n){
-    o+='<details class="svc-item" id="service-'+(n+1)+'"><summary><h3>'+s.t+'</h3><p>'+s.g+'</p></summary><div class="sbody">'
+    if(s.grp)o+='<div class="grp">'+s.grp+'</div>';
+    o+='<details class="svc-item" id="service-'+(n+1)+'"><summary><h3>'+s.t+'</h3><p>'+s.g+' <em class="more">Learn more</em></p></summary><div class="sbody">'
     +'<p class="full">'+s.i+'</p>'
     +'<div><h4>The challenge</h4><p>'+s.c+'</p></div>'
     +'<div><h4>How we help</h4>'+ul(s.h)+'</div>'
@@ -307,12 +436,13 @@ y:"We combine local relationships with professional discipline. Our highly quali
     +'<div><h4>What you receive</h4><ul>'+s.r.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></div>'
     +'<div><h4>Who we work with</h4><p>'+s.w+'</p></div>'
     +'<div><h4>Why work with us</h4><p>'+s.y+'</p></div>'
-    +'<div class="full"><a class="btn" href="#contact">Talk to us</a></div></div></details>';
+    +'<div class="full"><a class="btn" href="#contact">Book a consultation</a></div></div></details>';
   });
   document.getElementById('svc').innerHTML=o;
-  var h=location.hash.slice(1),e=h&&document.getElementById(h);
-  if(e&&e.tagName==='DETAILS')e.open=true;
+  document.getElementById('fsvc').innerHTML=S.map(function(s,n){return '<li><a href="#service-'+(n+1)+'">'+s.t+'</a></li>';}).join('');
 })();
+function openHash(){var h=location.hash.slice(1),e=h&&document.getElementById(h);if(e&&e.tagName==='DETAILS'){e.open=true;e.scrollIntoView();}}
+window.addEventListener('hashchange',openHash);openHash();
 var saved='en';try{saved=localStorage.getItem('aegis-lang')||'en';}catch(e){}
 setLang(TT[saved]?saved:'en');
 
@@ -320,8 +450,8 @@ document.getElementById('f').addEventListener('submit',function(e){
   e.preventDefault();
   var f=e.target,n=document.getElementById('note');
   if(!f.name.value.trim()||!f.email.value.includes('@')||!f.msg.value.trim()){n.textContent=t('Please fill in your name, a valid email and a message.');return;}
-  var body='Name: '+f.name.value+'\nEmail: '+f.email.value+'\nService: '+f.service.value+'\n\n'+f.msg.value;
-  window.location.href='mailto:info@aegis-ltd.com?subject='+encodeURIComponent('Website enquiry: '+f.service.value)+'&body='+encodeURIComponent(body);
+  var body='Name: '+f.name.value+'\nCompany: '+f.company.value+'\nEmail: '+f.email.value+'\nPhone: '+f.phone.value+'\n\n'+f.msg.value;
+  window.location.href='mailto:info@aegis-ltd.com?subject='+encodeURIComponent('Website enquiry')+'&body='+encodeURIComponent(body);
   n.textContent=t('Your email app is opening with your message ready to send.');
 });
 </script>
